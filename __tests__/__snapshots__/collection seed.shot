@@ -1,0 +1,4470 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Seed model 1`] = `
+{
+  "types": {
+    "lib.standard.geo": {
+      "$id": "lib.standard.geo",
+      "$defs": {
+        "Address": {
+          "$id": "Address",
+          "$package": "lib.standard.geo",
+          "type": "object",
+          "properties": {
+            "country": {
+              "$ref": "ReferenceWithType",
+              "$refPackage": "lib.core.reflection",
+              "$arguments": [
+                {
+                  "$ref": "Country",
+                  "$refPackage": "lib.standard.geo"
+                }
+              ],
+              "$refArguments": "lib.standard.geo.Country"
+            },
+            "city": {
+              "$ref": "ReferenceWithType",
+              "$refPackage": "lib.core.reflection",
+              "$arguments": [
+                {
+                  "$ref": "City",
+                  "$refPackage": "lib.standard.geo"
+                }
+              ],
+              "$refArguments": "lib.standard.geo.City"
+            },
+            "addressLine1": {
+              "type": "string"
+            },
+            "addressLine2": {
+              "type": "string"
+            },
+            "zip": {
+              "type": "string"
+            }
+          }
+        },
+        "City": {
+          "$id": "City",
+          "$package": "lib.standard.geo",
+          "type": "object",
+          "required": [
+            "name"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "country": {
+              "$ref": "ReferenceWithType",
+              "$refPackage": "lib.core.reflection",
+              "$arguments": [
+                {
+                  "$ref": "Country",
+                  "$refPackage": "lib.standard.geo"
+                }
+              ],
+              "$refArguments": "lib.standard.geo.Country"
+            }
+          }
+        },
+        "Country": {
+          "$id": "Country",
+          "$package": "lib.standard.geo",
+          "type": "object",
+          "required": [
+            "name"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            }
+          }
+        },
+        "Region": {
+          "$id": "Region",
+          "$package": "lib.standard.geo",
+          "type": "object",
+          "required": [
+            "name"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "country": {
+              "$ref": "ReferenceWithType",
+              "$refPackage": "lib.core.reflection",
+              "$arguments": [
+                {
+                  "$ref": "Country",
+                  "$refPackage": "lib.standard.geo"
+                }
+              ],
+              "$refArguments": "lib.standard.geo.Country"
+            }
+          }
+        }
+      }
+    }
+  },
+  "collections": {
+    "cities": {
+      "name": "Cities",
+      "collection": {
+        "$type": {
+          "$ref": "City",
+          "$refPackage": "lib.standard.geo"
+        }
+      }
+    },
+    "regions": {
+      "name": "Regions",
+      "collection": {
+        "$type": {
+          "$ref": "Region",
+          "$refPackage": "lib.standard.geo"
+        }
+      }
+    },
+    "countries": {
+      "name": "Countries",
+      "collection": {
+        "$type": {
+          "$ref": "Country",
+          "$refPackage": "lib.standard.geo"
+        }
+      }
+    }
+  },
+  "countries": {
+    "Україна": {
+      "name": "Україна"
+    }
+  },
+  "regions": {
+    "АвтономнаРеспублікаКрим": {
+      "name": "Автономна Республіка Крим",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Вінницькаобласть": {
+      "name": "Вінницька область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Волинськаобласть": {
+      "name": "Волинська область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Дніпропетровськаобласть": {
+      "name": "Дніпропетровська область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Донецькаобласть": {
+      "name": "Донецька область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Житомирськаобласть": {
+      "name": "Житомирська область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Закарпатськаобласть": {
+      "name": "Закарпатська область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Запорізькаобласть": {
+      "name": "Запорізька область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "ІваноФранківськаобласть": {
+      "name": "Івано-Франківська область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Київськаобласть": {
+      "name": "Київська область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Кіровоградськаобласть": {
+      "name": "Кіровоградська область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Луганськаобласть": {
+      "name": "Луганська область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Львівськаобласть": {
+      "name": "Львівська область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Київ": {
+      "name": "м. Київ",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Севастополь": {
+      "name": "м. Севастополь",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Миколаївськаобласть": {
+      "name": "Миколаївська область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Одеськаобласть": {
+      "name": "Одеська область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Полтавськаобласть": {
+      "name": "Полтавська область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Рівненськаобласть": {
+      "name": "Рівненська область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Сумськаобласть": {
+      "name": "Сумська область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Тернопільськаобласть": {
+      "name": "Тернопільська область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Харківськаобласть": {
+      "name": "Харківська область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Херсонськаобласть": {
+      "name": "Херсонська область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Хмельницькаобласть": {
+      "name": "Хмельницька область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Черкаськаобласть": {
+      "name": "Черкаська область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Чернівецькаобласть": {
+      "name": "Чернівецька область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Чернігівськаобласть": {
+      "name": "Чернігівська область",
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    }
+  },
+  "cities": {
+    "Алупка": {
+      "name": "Алупка",
+      "region": {
+        "$ref": "regions/АвтономнаРеспублікаКрим"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Алушта": {
+      "name": "Алушта",
+      "region": {
+        "$ref": "regions/АвтономнаРеспублікаКрим"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Армянськ": {
+      "name": "Армянськ",
+      "region": {
+        "$ref": "regions/АвтономнаРеспублікаКрим"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Бахчисарай": {
+      "name": "Бахчисарай",
+      "region": {
+        "$ref": "regions/АвтономнаРеспублікаКрим"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Білогірськ": {
+      "name": "Білогірськ",
+      "region": {
+        "$ref": "regions/АвтономнаРеспублікаКрим"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Джанкой": {
+      "name": "Джанкой",
+      "region": {
+        "$ref": "regions/АвтономнаРеспублікаКрим"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Євпаторія": {
+      "name": "Євпаторія",
+      "region": {
+        "$ref": "regions/АвтономнаРеспублікаКрим"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Керч": {
+      "name": "Керч",
+      "region": {
+        "$ref": "regions/АвтономнаРеспублікаКрим"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Красноперекопськ": {
+      "name": "Красноперекопськ",
+      "region": {
+        "$ref": "regions/АвтономнаРеспублікаКрим"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "ЯниКапу": {
+      "name": "Яни Капу",
+      "region": {
+        "$ref": "regions/АвтономнаРеспублікаКрим"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Саки": {
+      "name": "Саки",
+      "region": {
+        "$ref": "regions/АвтономнаРеспублікаКрим"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Сімферополь": {
+      "name": "Сімферополь",
+      "region": {
+        "$ref": "regions/АвтономнаРеспублікаКрим"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "СтарийКрим": {
+      "name": "Старий Крим",
+      "region": {
+        "$ref": "regions/АвтономнаРеспублікаКрим"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Судак": {
+      "name": "Судак",
+      "region": {
+        "$ref": "regions/АвтономнаРеспублікаКрим"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Феодосія": {
+      "name": "Феодосія",
+      "region": {
+        "$ref": "regions/АвтономнаРеспублікаКрим"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Щолкіне": {
+      "name": "Щолкіне",
+      "region": {
+        "$ref": "regions/АвтономнаРеспублікаКрим"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Ялта": {
+      "name": "Ялта",
+      "region": {
+        "$ref": "regions/АвтономнаРеспублікаКрим"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Бар": {
+      "name": "Бар",
+      "region": {
+        "$ref": "regions/Вінницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Бершадь": {
+      "name": "Бершадь",
+      "region": {
+        "$ref": "regions/Вінницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Вінниця": {
+      "name": "Вінниця",
+      "region": {
+        "$ref": "regions/Вінницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Гайсин": {
+      "name": "Гайсин",
+      "region": {
+        "$ref": "regions/Вінницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Гнівань": {
+      "name": "Гнівань",
+      "region": {
+        "$ref": "regions/Вінницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Жмеринка": {
+      "name": "Жмеринка",
+      "region": {
+        "$ref": "regions/Вінницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Іллінці": {
+      "name": "Іллінці",
+      "region": {
+        "$ref": "regions/Вінницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Калинівка": {
+      "name": "Калинівка",
+      "region": {
+        "$ref": "regions/Вінницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Козятин": {
+      "name": "Козятин",
+      "region": {
+        "$ref": "regions/Вінницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Ладижин": {
+      "name": "Ладижин",
+      "region": {
+        "$ref": "regions/Вінницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Липовець": {
+      "name": "Липовець",
+      "region": {
+        "$ref": "regions/Вінницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "МогилівПодільський": {
+      "name": "Могилів-Подільський",
+      "region": {
+        "$ref": "regions/Вінницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Немирів": {
+      "name": "Немирів",
+      "region": {
+        "$ref": "regions/Вінницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Погребище": {
+      "name": "Погребище",
+      "region": {
+        "$ref": "regions/Вінницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Тульчин": {
+      "name": "Тульчин",
+      "region": {
+        "$ref": "regions/Вінницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Хмільник": {
+      "name": "Хмільник",
+      "region": {
+        "$ref": "regions/Вінницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Шаргород": {
+      "name": "Шаргород",
+      "region": {
+        "$ref": "regions/Вінницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Ямпіль": {
+      "name": "Ямпіль",
+      "region": {
+        "$ref": "regions/Вінницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Берестечко": {
+      "name": "Берестечко",
+      "region": {
+        "$ref": "regions/Волинськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "ВолодимирВолинський": {
+      "name": "Володимир-Волинський",
+      "region": {
+        "$ref": "regions/Волинськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Горохів": {
+      "name": "Горохів",
+      "region": {
+        "$ref": "regions/Волинськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "КаміньКаширський": {
+      "name": "Камінь-Каширський",
+      "region": {
+        "$ref": "regions/Волинськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Ківерці": {
+      "name": "Ківерці",
+      "region": {
+        "$ref": "regions/Волинськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Ковель": {
+      "name": "Ковель",
+      "region": {
+        "$ref": "regions/Волинськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Луцьк": {
+      "name": "Луцьк",
+      "region": {
+        "$ref": "regions/Волинськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Любомль": {
+      "name": "Любомль",
+      "region": {
+        "$ref": "regions/Волинськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Нововолинськ": {
+      "name": "Нововолинськ",
+      "region": {
+        "$ref": "regions/Волинськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Рожище": {
+      "name": "Рожище",
+      "region": {
+        "$ref": "regions/Волинськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Устилуг": {
+      "name": "Устилуг",
+      "region": {
+        "$ref": "regions/Волинськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Апостолове": {
+      "name": "Апостолове",
+      "region": {
+        "$ref": "regions/Дніпропетровськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Верхівцеве": {
+      "name": "Верхівцеве",
+      "region": {
+        "$ref": "regions/Дніпропетровськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Верхньодніпровськ": {
+      "name": "Верхньодніпровськ",
+      "region": {
+        "$ref": "regions/Дніпропетровськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Вільногірськ": {
+      "name": "Вільногірськ",
+      "region": {
+        "$ref": "regions/Дніпропетровськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Дніпро": {
+      "name": "Дніпро",
+      "region": {
+        "$ref": "regions/Дніпропетровськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "ЖовтіВоди": {
+      "name": "Жовті Води",
+      "region": {
+        "$ref": "regions/Дніпропетровськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Зеленодольськ": {
+      "name": "Зеленодольськ",
+      "region": {
+        "$ref": "regions/Дніпропетровськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Камянське": {
+      "name": "Кам'янське",
+      "region": {
+        "$ref": "regions/Дніпропетровськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "КривийРіг": {
+      "name": "Кривий Ріг",
+      "region": {
+        "$ref": "regions/Дніпропетровськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Марганець": {
+      "name": "Марганець",
+      "region": {
+        "$ref": "regions/Дніпропетровськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Нікополь": {
+      "name": "Нікополь",
+      "region": {
+        "$ref": "regions/Дніпропетровськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Новомосковськ": {
+      "name": "Новомосковськ",
+      "region": {
+        "$ref": "regions/Дніпропетровськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Павлоград": {
+      "name": "Павлоград",
+      "region": {
+        "$ref": "regions/Дніпропетровськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Перещепине": {
+      "name": "Перещепине",
+      "region": {
+        "$ref": "regions/Дніпропетровськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Першотравенськ": {
+      "name": "Першотравенськ",
+      "region": {
+        "$ref": "regions/Дніпропетровськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Підгородне": {
+      "name": "Підгородне",
+      "region": {
+        "$ref": "regions/Дніпропетровськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Покров": {
+      "name": "Покров",
+      "region": {
+        "$ref": "regions/Дніпропетровськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Пятихатки": {
+      "name": "П'ятихатки",
+      "region": {
+        "$ref": "regions/Дніпропетровськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Синельникове": {
+      "name": "Синельникове",
+      "region": {
+        "$ref": "regions/Дніпропетровськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Тернівка": {
+      "name": "Тернівка",
+      "region": {
+        "$ref": "regions/Дніпропетровськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Авдіївка": {
+      "name": "Авдіївка",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Амвросіївка": {
+      "name": "Амвросіївка",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Бахмут": {
+      "name": "Бахмут",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Білицьке": {
+      "name": "Білицьке",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Білозерське": {
+      "name": "Білозерське",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Бунге": {
+      "name": "Бунге",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Волноваха": {
+      "name": "Волноваха",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Вуглегірськ": {
+      "name": "Вуглегірськ",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Вугледар": {
+      "name": "Вугледар",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Гірник": {
+      "name": "Гірник",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Горлівка": {
+      "name": "Горлівка",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Дебальцеве": {
+      "name": "Дебальцеве",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Добропілля": {
+      "name": "Добропілля",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Докучаєвськ": {
+      "name": "Докучаєвськ",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Донецьк": {
+      "name": "Донецьк",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Дружківка": {
+      "name": "Дружківка",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Єнакієве": {
+      "name": "Єнакієве",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Жданівка": {
+      "name": "Жданівка",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Залізне": {
+      "name": "Залізне",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Зугрес": {
+      "name": "Зугрес",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Іловайськ": {
+      "name": "Іловайськ",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Кальміуське": {
+      "name": "Кальміуське",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Костянтинівка": {
+      "name": "Костянтинівка",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Краматорськ": {
+      "name": "Краматорськ",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Красногорівка": {
+      "name": "Красногорівка",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Курахове": {
+      "name": "Курахове",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Лиман": {
+      "name": "Лиман",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Макіївка": {
+      "name": "Макіївка",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Маріуполь": {
+      "name": "Маріуполь",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Марїнка": {
+      "name": "Мар'їнка",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Миколаївка": {
+      "name": "Миколаївка",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Мирноград": {
+      "name": "Мирноград",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Моспине": {
+      "name": "Моспине",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Новоазовськ": {
+      "name": "Новоазовськ",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Новогродівка": {
+      "name": "Новогродівка",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Покровськ": {
+      "name": "Покровськ",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Родинське": {
+      "name": "Родинське",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Світлодарськ": {
+      "name": "Світлодарськ",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Святогірськ": {
+      "name": "Святогірськ",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Селидове": {
+      "name": "Селидове",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Сіверськ": {
+      "name": "Сіверськ",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Словянськ": {
+      "name": "Слов'янськ",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Сніжне": {
+      "name": "Сніжне",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Соледар": {
+      "name": "Соледар",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Торецьк": {
+      "name": "Торецьк",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Українськ": {
+      "name": "Українськ",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Харцизьк": {
+      "name": "Харцизьк",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Хрестівка": {
+      "name": "Хрестівка",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "ЧасівЯр": {
+      "name": "Часів Яр",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Чистякове": {
+      "name": "Чистякове",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Шахтарськ": {
+      "name": "Шахтарськ",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Ясинувата": {
+      "name": "Ясинувата",
+      "region": {
+        "$ref": "regions/Донецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Андрушівка": {
+      "name": "Андрушівка",
+      "region": {
+        "$ref": "regions/Житомирськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Баранівка": {
+      "name": "Баранівка",
+      "region": {
+        "$ref": "regions/Житомирськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Бердичів": {
+      "name": "Бердичів",
+      "region": {
+        "$ref": "regions/Житомирськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Житомир": {
+      "name": "Житомир",
+      "region": {
+        "$ref": "regions/Житомирськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Коростень": {
+      "name": "Коростень",
+      "region": {
+        "$ref": "regions/Житомирськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Коростишів": {
+      "name": "Коростишів",
+      "region": {
+        "$ref": "regions/Житомирськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Малин": {
+      "name": "Малин",
+      "region": {
+        "$ref": "regions/Житомирськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "НовоградВолинський": {
+      "name": "Новоград-Волинський",
+      "region": {
+        "$ref": "regions/Житомирськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Овруч": {
+      "name": "Овруч",
+      "region": {
+        "$ref": "regions/Житомирськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Олевськ": {
+      "name": "Олевськ",
+      "region": {
+        "$ref": "regions/Житомирськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Радомишль": {
+      "name": "Радомишль",
+      "region": {
+        "$ref": "regions/Житомирськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Чуднів": {
+      "name": "Чуднів",
+      "region": {
+        "$ref": "regions/Житомирськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Берегове": {
+      "name": "Берегове",
+      "region": {
+        "$ref": "regions/Закарпатськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Виноградів": {
+      "name": "Виноградів",
+      "region": {
+        "$ref": "regions/Закарпатськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Іршава": {
+      "name": "Іршава",
+      "region": {
+        "$ref": "regions/Закарпатськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Мукачево": {
+      "name": "Мукачево",
+      "region": {
+        "$ref": "regions/Закарпатськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Перечин": {
+      "name": "Перечин",
+      "region": {
+        "$ref": "regions/Закарпатськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Рахів": {
+      "name": "Рахів",
+      "region": {
+        "$ref": "regions/Закарпатськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Свалява": {
+      "name": "Свалява",
+      "region": {
+        "$ref": "regions/Закарпатськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Тячів": {
+      "name": "Тячів",
+      "region": {
+        "$ref": "regions/Закарпатськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Ужгород": {
+      "name": "Ужгород",
+      "region": {
+        "$ref": "regions/Закарпатськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Хуст": {
+      "name": "Хуст",
+      "region": {
+        "$ref": "regions/Закарпатськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Чоп": {
+      "name": "Чоп",
+      "region": {
+        "$ref": "regions/Закарпатськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Бердянськ": {
+      "name": "Бердянськ",
+      "region": {
+        "$ref": "regions/Запорізькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Василівка": {
+      "name": "Василівка",
+      "region": {
+        "$ref": "regions/Запорізькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Вільнянськ": {
+      "name": "Вільнянськ",
+      "region": {
+        "$ref": "regions/Запорізькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Гуляйполе": {
+      "name": "Гуляйполе",
+      "region": {
+        "$ref": "regions/Запорізькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Дніпрорудне": {
+      "name": "Дніпрорудне",
+      "region": {
+        "$ref": "regions/Запорізькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Енергодар": {
+      "name": "Енергодар",
+      "region": {
+        "$ref": "regions/Запорізькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Запоріжжя": {
+      "name": "Запоріжжя",
+      "region": {
+        "$ref": "regions/Запорізькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "КамянкаДніпровська": {
+      "name": "Кам'янка-Дніпровська",
+      "region": {
+        "$ref": "regions/Запорізькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Мелітополь": {
+      "name": "Мелітополь",
+      "region": {
+        "$ref": "regions/Запорізькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Молочанськ": {
+      "name": "Молочанськ",
+      "region": {
+        "$ref": "regions/Запорізькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Оріхів": {
+      "name": "Оріхів",
+      "region": {
+        "$ref": "regions/Запорізькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Пологи": {
+      "name": "Пологи",
+      "region": {
+        "$ref": "regions/Запорізькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Приморськ": {
+      "name": "Приморськ",
+      "region": {
+        "$ref": "regions/Запорізькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Токмак": {
+      "name": "Токмак",
+      "region": {
+        "$ref": "regions/Запорізькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Болехів": {
+      "name": "Болехів",
+      "region": {
+        "$ref": "regions/ІваноФранківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Бурштин": {
+      "name": "Бурштин",
+      "region": {
+        "$ref": "regions/ІваноФранківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Галич": {
+      "name": "Галич",
+      "region": {
+        "$ref": "regions/ІваноФранківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Городенка": {
+      "name": "Городенка",
+      "region": {
+        "$ref": "regions/ІваноФранківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Долина": {
+      "name": "Долина",
+      "region": {
+        "$ref": "regions/ІваноФранківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "ІваноФранківськ": {
+      "name": "Івано-Франківськ",
+      "region": {
+        "$ref": "regions/ІваноФранківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Калуш": {
+      "name": "Калуш",
+      "region": {
+        "$ref": "regions/ІваноФранківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Коломия": {
+      "name": "Коломия",
+      "region": {
+        "$ref": "regions/ІваноФранківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Косів": {
+      "name": "Косів",
+      "region": {
+        "$ref": "regions/ІваноФранківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Надвірна": {
+      "name": "Надвірна",
+      "region": {
+        "$ref": "regions/ІваноФранківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Рогатин": {
+      "name": "Рогатин",
+      "region": {
+        "$ref": "regions/ІваноФранківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Снятин": {
+      "name": "Снятин",
+      "region": {
+        "$ref": "regions/ІваноФранківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Тисмениця": {
+      "name": "Тисмениця",
+      "region": {
+        "$ref": "regions/ІваноФранківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Тлумач": {
+      "name": "Тлумач",
+      "region": {
+        "$ref": "regions/ІваноФранківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Яремче": {
+      "name": "Яремче",
+      "region": {
+        "$ref": "regions/ІваноФранківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Березань": {
+      "name": "Березань",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "БілаЦерква": {
+      "name": "Біла Церква",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Богуслав": {
+      "name": "Богуслав",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Бориспіль": {
+      "name": "Бориспіль",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Боярка": {
+      "name": "Боярка",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Бровари": {
+      "name": "Бровари",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Буча": {
+      "name": "Буча",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Васильків": {
+      "name": "Васильків",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Вишгород": {
+      "name": "Вишгород",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Вишневе": {
+      "name": "Вишневе",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Ірпінь": {
+      "name": "Ірпінь",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Кагарлик": {
+      "name": "Кагарлик",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Миронівка": {
+      "name": "Миронівка",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Обухів": {
+      "name": "Обухів",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Переяслав": {
+      "name": "Переяслав",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Припять": {
+      "name": "Прип'ять",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Ржищів": {
+      "name": "Ржищів",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Сквира": {
+      "name": "Сквира",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Славутич": {
+      "name": "Славутич",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Тараща": {
+      "name": "Тараща",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Тетіїв": {
+      "name": "Тетіїв",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Узин": {
+      "name": "Узин",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Українка": {
+      "name": "Українка",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Фастів": {
+      "name": "Фастів",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Чорнобиль": {
+      "name": "Чорнобиль",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Яготин": {
+      "name": "Яготин",
+      "region": {
+        "$ref": "regions/Київськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Благовіщенське": {
+      "name": "Благовіщенське",
+      "region": {
+        "$ref": "regions/Кіровоградськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Бобринець": {
+      "name": "Бобринець",
+      "region": {
+        "$ref": "regions/Кіровоградськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Гайворон": {
+      "name": "Гайворон",
+      "region": {
+        "$ref": "regions/Кіровоградськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Долинська": {
+      "name": "Долинська",
+      "region": {
+        "$ref": "regions/Кіровоградськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Знамянка": {
+      "name": "Знам'янка",
+      "region": {
+        "$ref": "regions/Кіровоградськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Кропивницький": {
+      "name": "Кропивницький",
+      "region": {
+        "$ref": "regions/Кіровоградськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "МалаВиска": {
+      "name": "Мала Виска",
+      "region": {
+        "$ref": "regions/Кіровоградськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Новомиргород": {
+      "name": "Новомиргород",
+      "region": {
+        "$ref": "regions/Кіровоградськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Новоукраїнка": {
+      "name": "Новоукраїнка",
+      "region": {
+        "$ref": "regions/Кіровоградськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Олександрія": {
+      "name": "Олександрія",
+      "region": {
+        "$ref": "regions/Кіровоградськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Помічна": {
+      "name": "Помічна",
+      "region": {
+        "$ref": "regions/Кіровоградськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Світловодськ": {
+      "name": "Світловодськ",
+      "region": {
+        "$ref": "regions/Кіровоградськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Алмазна": {
+      "name": "Алмазна",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Алчевськ": {
+      "name": "Алчевськ",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Антрацит": {
+      "name": "Антрацит",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "БоковоХрустальне": {
+      "name": "Боково-Хрустальне",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Брянка": {
+      "name": "Брянка",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Вознесенівка": {
+      "name": "Вознесенівка",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Гірське": {
+      "name": "Гірське",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Голубівка": {
+      "name": "Голубівка",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Довжанськ": {
+      "name": "Довжанськ",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Зимогіря": {
+      "name": "Зимогір'я",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Золоте": {
+      "name": "Золоте",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Зоринськ": {
+      "name": "Зоринськ",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Ірміно": {
+      "name": "Ірміно",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Кадіївка": {
+      "name": "Кадіївка",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Кипуче": {
+      "name": "Кипуче",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Кремінна": {
+      "name": "Кремінна",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Лисичанськ": {
+      "name": "Лисичанськ",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Луганськ": {
+      "name": "Луганськ",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Лутугине": {
+      "name": "Лутугине",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Міусинськ": {
+      "name": "Міусинськ",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Молодогвардійськ": {
+      "name": "Молодогвардійськ",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Новодружеськ": {
+      "name": "Новодружеськ",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Олександрівськ": {
+      "name": "Олександрівськ",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Первомайськ": {
+      "name": "Первомайськ",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Перевальськ": {
+      "name": "Перевальськ",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "ПетровоКрасносілля": {
+      "name": "Петрово-Красносілля",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Попасна": {
+      "name": "Попасна",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Привілля": {
+      "name": "Привілля",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Ровеньки": {
+      "name": "Ровеньки",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Рубіжне": {
+      "name": "Рубіжне",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Сватове": {
+      "name": "Сватове",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Сєвєродонецьк": {
+      "name": "Сєвєродонецьк",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Сорокине": {
+      "name": "Сорокине",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Старобільськ": {
+      "name": "Старобільськ",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Суходільськ": {
+      "name": "Суходільськ",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Хрустальний": {
+      "name": "Хрустальний",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Щастя": {
+      "name": "Щастя",
+      "region": {
+        "$ref": "regions/Луганськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Белз": {
+      "name": "Белз",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Бібрка": {
+      "name": "Бібрка",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Борислав": {
+      "name": "Борислав",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Броди": {
+      "name": "Броди",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Буськ": {
+      "name": "Буськ",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "ВеликіМости": {
+      "name": "Великі Мости",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Винники": {
+      "name": "Винники",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Глиняни": {
+      "name": "Глиняни",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Городок": {
+      "name": "Городок",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Добромиль": {
+      "name": "Добромиль",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Дрогобич": {
+      "name": "Дрогобич",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Дубляни": {
+      "name": "Дубляни",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Жидачів": {
+      "name": "Жидачів",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Жовква": {
+      "name": "Жовква",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Золочів": {
+      "name": "Золочів",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "КамянкаБузька": {
+      "name": "Кам'янка-Бузька",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Комарно": {
+      "name": "Комарно",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Львів": {
+      "name": "Львів",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Миколаїв": {
+      "name": "Миколаїв",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Моршин": {
+      "name": "Моршин",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Мостиська": {
+      "name": "Мостиська",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "НовийКалинів": {
+      "name": "Новий Калинів",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "НовийРозділ": {
+      "name": "Новий Розділ",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Новояворівськ": {
+      "name": "Новояворівськ",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Перемишляни": {
+      "name": "Перемишляни",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Пустомити": {
+      "name": "Пустомити",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "РаваРуська": {
+      "name": "Рава-Руська",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Радехів": {
+      "name": "Радехів",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Рудки": {
+      "name": "Рудки",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Самбір": {
+      "name": "Самбір",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Сколе": {
+      "name": "Сколе",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Сокаль": {
+      "name": "Сокаль",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Соснівка": {
+      "name": "Соснівка",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "СтарийСамбір": {
+      "name": "Старий Самбір",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Стебник": {
+      "name": "Стебник",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Стрий": {
+      "name": "Стрий",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "СудоваВишня": {
+      "name": "Судова Вишня",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Трускавець": {
+      "name": "Трускавець",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Турка": {
+      "name": "Турка",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Угнів": {
+      "name": "Угнів",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Хирів": {
+      "name": "Хирів",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Ходорів": {
+      "name": "Ходорів",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Червоноград": {
+      "name": "Червоноград",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Яворів": {
+      "name": "Яворів",
+      "region": {
+        "$ref": "regions/Львівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Київ": {
+      "name": "Київ",
+      "region": {
+        "$ref": "regions/Київ"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Інкерман": {
+      "name": "Інкерман",
+      "region": {
+        "$ref": "regions/Севастополь"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Севастополь": {
+      "name": "Севастополь",
+      "region": {
+        "$ref": "regions/Севастополь"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Баштанка": {
+      "name": "Баштанка",
+      "region": {
+        "$ref": "regions/Миколаївськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Вознесенськ": {
+      "name": "Вознесенськ",
+      "region": {
+        "$ref": "regions/Миколаївськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "МиколаївМ": {
+      "name": "Миколаїв",
+      "region": {
+        "$ref": "regions/Миколаївськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "НоваОдеса": {
+      "name": "Нова Одеса",
+      "region": {
+        "$ref": "regions/Миколаївськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "НовийБуг": {
+      "name": "Новий Буг",
+      "region": {
+        "$ref": "regions/Миколаївськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Очаків": {
+      "name": "Очаків",
+      "region": {
+        "$ref": "regions/Миколаївськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "ПервомайськМ": {
+      "name": "Первомайськ",
+      "region": {
+        "$ref": "regions/Миколаївськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Снігурівка": {
+      "name": "Снігурівка",
+      "region": {
+        "$ref": "regions/Миколаївськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Южноукраїнськ": {
+      "name": "Южноукраїнськ",
+      "region": {
+        "$ref": "regions/Миколаївськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Ананьїв": {
+      "name": "Ананьїв",
+      "region": {
+        "$ref": "regions/Одеськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Арциз": {
+      "name": "Арциз",
+      "region": {
+        "$ref": "regions/Одеськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Балта": {
+      "name": "Балта",
+      "region": {
+        "$ref": "regions/Одеськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Березівка": {
+      "name": "Березівка",
+      "region": {
+        "$ref": "regions/Одеськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "БілгородДністровський": {
+      "name": "Білгород-Дністровський",
+      "region": {
+        "$ref": "regions/Одеськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Біляївка": {
+      "name": "Біляївка",
+      "region": {
+        "$ref": "regions/Одеськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Болград": {
+      "name": "Болград",
+      "region": {
+        "$ref": "regions/Одеськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Вилкове": {
+      "name": "Вилкове",
+      "region": {
+        "$ref": "regions/Одеськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Ізмаїл": {
+      "name": "Ізмаїл",
+      "region": {
+        "$ref": "regions/Одеськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Кілія": {
+      "name": "Кілія",
+      "region": {
+        "$ref": "regions/Одеськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Кодима": {
+      "name": "Кодима",
+      "region": {
+        "$ref": "regions/Одеськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Одеса": {
+      "name": "Одеса",
+      "region": {
+        "$ref": "regions/Одеськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Подільськ": {
+      "name": "Подільськ",
+      "region": {
+        "$ref": "regions/Одеськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Рені": {
+      "name": "Рені",
+      "region": {
+        "$ref": "regions/Одеськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Роздільна": {
+      "name": "Роздільна",
+      "region": {
+        "$ref": "regions/Одеськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Татарбунари": {
+      "name": "Татарбунари",
+      "region": {
+        "$ref": "regions/Одеськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Теплодар": {
+      "name": "Теплодар",
+      "region": {
+        "$ref": "regions/Одеськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Чорноморськ": {
+      "name": "Чорноморськ",
+      "region": {
+        "$ref": "regions/Одеськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Южне": {
+      "name": "Южне",
+      "region": {
+        "$ref": "regions/Одеськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Гадяч": {
+      "name": "Гадяч",
+      "region": {
+        "$ref": "regions/Полтавськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Глобине": {
+      "name": "Глобине",
+      "region": {
+        "$ref": "regions/Полтавськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "ГорішніПлавні": {
+      "name": "Горішні Плавні",
+      "region": {
+        "$ref": "regions/Полтавськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Гребінка": {
+      "name": "Гребінка",
+      "region": {
+        "$ref": "regions/Полтавськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Заводське": {
+      "name": "Заводське",
+      "region": {
+        "$ref": "regions/Полтавськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Зіньків": {
+      "name": "Зіньків",
+      "region": {
+        "$ref": "regions/Полтавськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Карлівка": {
+      "name": "Карлівка",
+      "region": {
+        "$ref": "regions/Полтавськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Кобеляки": {
+      "name": "Кобеляки",
+      "region": {
+        "$ref": "regions/Полтавськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Кременчук": {
+      "name": "Кременчук",
+      "region": {
+        "$ref": "regions/Полтавськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Лохвиця": {
+      "name": "Лохвиця",
+      "region": {
+        "$ref": "regions/Полтавськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Лубни": {
+      "name": "Лубни",
+      "region": {
+        "$ref": "regions/Полтавськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Миргород": {
+      "name": "Миргород",
+      "region": {
+        "$ref": "regions/Полтавськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Пирятин": {
+      "name": "Пирятин",
+      "region": {
+        "$ref": "regions/Полтавськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Полтава": {
+      "name": "Полтава",
+      "region": {
+        "$ref": "regions/Полтавськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Решетилівка": {
+      "name": "Решетилівка",
+      "region": {
+        "$ref": "regions/Полтавськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Хорол": {
+      "name": "Хорол",
+      "region": {
+        "$ref": "regions/Полтавськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Березне": {
+      "name": "Березне",
+      "region": {
+        "$ref": "regions/Рівненськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Вараш": {
+      "name": "Вараш",
+      "region": {
+        "$ref": "regions/Рівненськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Дубно": {
+      "name": "Дубно",
+      "region": {
+        "$ref": "regions/Рівненськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Дубровиця": {
+      "name": "Дубровиця",
+      "region": {
+        "$ref": "regions/Рівненськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Здолбунів": {
+      "name": "Здолбунів",
+      "region": {
+        "$ref": "regions/Рівненськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Корець": {
+      "name": "Корець",
+      "region": {
+        "$ref": "regions/Рівненськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Костопіль": {
+      "name": "Костопіль",
+      "region": {
+        "$ref": "regions/Рівненськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Острог": {
+      "name": "Острог",
+      "region": {
+        "$ref": "regions/Рівненськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Радивилів": {
+      "name": "Радивилів",
+      "region": {
+        "$ref": "regions/Рівненськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Рівне": {
+      "name": "Рівне",
+      "region": {
+        "$ref": "regions/Рівненськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Сарни": {
+      "name": "Сарни",
+      "region": {
+        "$ref": "regions/Рівненськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Білопілля": {
+      "name": "Білопілля",
+      "region": {
+        "$ref": "regions/Сумськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Буринь": {
+      "name": "Буринь",
+      "region": {
+        "$ref": "regions/Сумськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Ворожба": {
+      "name": "Ворожба",
+      "region": {
+        "$ref": "regions/Сумськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Глухів": {
+      "name": "Глухів",
+      "region": {
+        "$ref": "regions/Сумськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Дружба": {
+      "name": "Дружба",
+      "region": {
+        "$ref": "regions/Сумськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Конотоп": {
+      "name": "Конотоп",
+      "region": {
+        "$ref": "regions/Сумськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Кролевець": {
+      "name": "Кролевець",
+      "region": {
+        "$ref": "regions/Сумськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Лебедин": {
+      "name": "Лебедин",
+      "region": {
+        "$ref": "regions/Сумськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Охтирка": {
+      "name": "Охтирка",
+      "region": {
+        "$ref": "regions/Сумськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Путивль": {
+      "name": "Путивль",
+      "region": {
+        "$ref": "regions/Сумськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Ромни": {
+      "name": "Ромни",
+      "region": {
+        "$ref": "regions/Сумськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "СерединаБуда": {
+      "name": "Середина-Буда",
+      "region": {
+        "$ref": "regions/Сумськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Суми": {
+      "name": "Суми",
+      "region": {
+        "$ref": "regions/Сумськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Тростянець": {
+      "name": "Тростянець",
+      "region": {
+        "$ref": "regions/Сумськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Шостка": {
+      "name": "Шостка",
+      "region": {
+        "$ref": "regions/Сумськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Бережани": {
+      "name": "Бережани",
+      "region": {
+        "$ref": "regions/Тернопільськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Борщів": {
+      "name": "Борщів",
+      "region": {
+        "$ref": "regions/Тернопільськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Бучач": {
+      "name": "Бучач",
+      "region": {
+        "$ref": "regions/Тернопільськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Заліщики": {
+      "name": "Заліщики",
+      "region": {
+        "$ref": "regions/Тернопільськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Збараж": {
+      "name": "Збараж",
+      "region": {
+        "$ref": "regions/Тернопільськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Зборів": {
+      "name": "Зборів",
+      "region": {
+        "$ref": "regions/Тернопільськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Копичинці": {
+      "name": "Копичинці",
+      "region": {
+        "$ref": "regions/Тернопільськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Кременець": {
+      "name": "Кременець",
+      "region": {
+        "$ref": "regions/Тернопільськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Ланівці": {
+      "name": "Ланівці",
+      "region": {
+        "$ref": "regions/Тернопільськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Монастириська": {
+      "name": "Монастириська",
+      "region": {
+        "$ref": "regions/Тернопільськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Підгайці": {
+      "name": "Підгайці",
+      "region": {
+        "$ref": "regions/Тернопільськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Почаїв": {
+      "name": "Почаїв",
+      "region": {
+        "$ref": "regions/Тернопільськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Скалат": {
+      "name": "Скалат",
+      "region": {
+        "$ref": "regions/Тернопільськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Теребовля": {
+      "name": "Теребовля",
+      "region": {
+        "$ref": "regions/Тернопільськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Тернопіль": {
+      "name": "Тернопіль",
+      "region": {
+        "$ref": "regions/Тернопільськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Хоростків": {
+      "name": "Хоростків",
+      "region": {
+        "$ref": "regions/Тернопільськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Чортків": {
+      "name": "Чортків",
+      "region": {
+        "$ref": "regions/Тернопільськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Шумськ": {
+      "name": "Шумськ",
+      "region": {
+        "$ref": "regions/Тернопільськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Балаклія": {
+      "name": "Балаклія",
+      "region": {
+        "$ref": "regions/Харківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Барвінкове": {
+      "name": "Барвінкове",
+      "region": {
+        "$ref": "regions/Харківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Богодухів": {
+      "name": "Богодухів",
+      "region": {
+        "$ref": "regions/Харківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Валки": {
+      "name": "Валки",
+      "region": {
+        "$ref": "regions/Харківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Вовчанськ": {
+      "name": "Вовчанськ",
+      "region": {
+        "$ref": "regions/Харківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Дергачі": {
+      "name": "Дергачі",
+      "region": {
+        "$ref": "regions/Харківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Зміїв": {
+      "name": "Зміїв",
+      "region": {
+        "$ref": "regions/Харківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Ізюм": {
+      "name": "Ізюм",
+      "region": {
+        "$ref": "regions/Харківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Красноград": {
+      "name": "Красноград",
+      "region": {
+        "$ref": "regions/Харківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Купянськ": {
+      "name": "Куп'янськ",
+      "region": {
+        "$ref": "regions/Харківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Лозова": {
+      "name": "Лозова",
+      "region": {
+        "$ref": "regions/Харківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Люботин": {
+      "name": "Люботин",
+      "region": {
+        "$ref": "regions/Харківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Мерефа": {
+      "name": "Мерефа",
+      "region": {
+        "$ref": "regions/Харківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Первомайський": {
+      "name": "Первомайський",
+      "region": {
+        "$ref": "regions/Харківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Південне": {
+      "name": "Південне",
+      "region": {
+        "$ref": "regions/Харківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Харків": {
+      "name": "Харків",
+      "region": {
+        "$ref": "regions/Харківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Чугуїв": {
+      "name": "Чугуїв",
+      "region": {
+        "$ref": "regions/Харківськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Берислав": {
+      "name": "Берислав",
+      "region": {
+        "$ref": "regions/Херсонськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Генічеськ": {
+      "name": "Генічеськ",
+      "region": {
+        "$ref": "regions/Херсонськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "ГолаПристань": {
+      "name": "Гола Пристань",
+      "region": {
+        "$ref": "regions/Херсонськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Каховка": {
+      "name": "Каховка",
+      "region": {
+        "$ref": "regions/Херсонськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "НоваКаховка": {
+      "name": "Нова Каховка",
+      "region": {
+        "$ref": "regions/Херсонськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Олешки": {
+      "name": "Олешки",
+      "region": {
+        "$ref": "regions/Херсонськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Скадовськ": {
+      "name": "Скадовськ",
+      "region": {
+        "$ref": "regions/Херсонськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Таврійськ": {
+      "name": "Таврійськ",
+      "region": {
+        "$ref": "regions/Херсонськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Херсон": {
+      "name": "Херсон",
+      "region": {
+        "$ref": "regions/Херсонськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Волочиськ": {
+      "name": "Волочиськ",
+      "region": {
+        "$ref": "regions/Хмельницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "ГородокХ": {
+      "name": "Городок",
+      "region": {
+        "$ref": "regions/Хмельницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Деражня": {
+      "name": "Деражня",
+      "region": {
+        "$ref": "regions/Хмельницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Дунаївці": {
+      "name": "Дунаївці",
+      "region": {
+        "$ref": "regions/Хмельницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Ізяслав": {
+      "name": "Ізяслав",
+      "region": {
+        "$ref": "regions/Хмельницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "КамянецьПодільський": {
+      "name": "Кам'янець-Подільський",
+      "region": {
+        "$ref": "regions/Хмельницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Красилів": {
+      "name": "Красилів",
+      "region": {
+        "$ref": "regions/Хмельницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Нетішин": {
+      "name": "Нетішин",
+      "region": {
+        "$ref": "regions/Хмельницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Полонне": {
+      "name": "Полонне",
+      "region": {
+        "$ref": "regions/Хмельницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Славута": {
+      "name": "Славута",
+      "region": {
+        "$ref": "regions/Хмельницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Старокостянтинів": {
+      "name": "Старокостянтинів",
+      "region": {
+        "$ref": "regions/Хмельницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Хмельницький": {
+      "name": "Хмельницький",
+      "region": {
+        "$ref": "regions/Хмельницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Шепетівка": {
+      "name": "Шепетівка",
+      "region": {
+        "$ref": "regions/Хмельницькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Ватутіне": {
+      "name": "Ватутіне",
+      "region": {
+        "$ref": "regions/Черкаськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Городище": {
+      "name": "Городище",
+      "region": {
+        "$ref": "regions/Черкаськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Жашків": {
+      "name": "Жашків",
+      "region": {
+        "$ref": "regions/Черкаськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Звенигородка": {
+      "name": "Звенигородка",
+      "region": {
+        "$ref": "regions/Черкаськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Золотоноша": {
+      "name": "Золотоноша",
+      "region": {
+        "$ref": "regions/Черкаськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Камянка": {
+      "name": "Кам'янка",
+      "region": {
+        "$ref": "regions/Черкаськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Канів": {
+      "name": "Канів",
+      "region": {
+        "$ref": "regions/Черкаськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "КорсуньШевченківський": {
+      "name": "Корсунь-Шевченківський",
+      "region": {
+        "$ref": "regions/Черкаськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Монастирище": {
+      "name": "Монастирище",
+      "region": {
+        "$ref": "regions/Черкаськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Сміла": {
+      "name": "Сміла",
+      "region": {
+        "$ref": "regions/Черкаськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Тальне": {
+      "name": "Тальне",
+      "region": {
+        "$ref": "regions/Черкаськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Умань": {
+      "name": "Умань",
+      "region": {
+        "$ref": "regions/Черкаськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Христинівка": {
+      "name": "Христинівка",
+      "region": {
+        "$ref": "regions/Черкаськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Черкаси": {
+      "name": "Черкаси",
+      "region": {
+        "$ref": "regions/Черкаськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Чигирин": {
+      "name": "Чигирин",
+      "region": {
+        "$ref": "regions/Черкаськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Шпола": {
+      "name": "Шпола",
+      "region": {
+        "$ref": "regions/Черкаськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Вашківці": {
+      "name": "Вашківці",
+      "region": {
+        "$ref": "regions/Чернівецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Вижниця": {
+      "name": "Вижниця",
+      "region": {
+        "$ref": "regions/Чернівецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Герца": {
+      "name": "Герца",
+      "region": {
+        "$ref": "regions/Чернівецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Заставна": {
+      "name": "Заставна",
+      "region": {
+        "$ref": "regions/Чернівецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Кіцмань": {
+      "name": "Кіцмань",
+      "region": {
+        "$ref": "regions/Чернівецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Новодністровськ": {
+      "name": "Новодністровськ",
+      "region": {
+        "$ref": "regions/Чернівецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Новоселиця": {
+      "name": "Новоселиця",
+      "region": {
+        "$ref": "regions/Чернівецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Сокиряни": {
+      "name": "Сокиряни",
+      "region": {
+        "$ref": "regions/Чернівецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Сторожинець": {
+      "name": "Сторожинець",
+      "region": {
+        "$ref": "regions/Чернівецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Хотин": {
+      "name": "Хотин",
+      "region": {
+        "$ref": "regions/Чернівецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Чернівці": {
+      "name": "Чернівці",
+      "region": {
+        "$ref": "regions/Чернівецькаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Батурин": {
+      "name": "Батурин",
+      "region": {
+        "$ref": "regions/Чернігівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Бахмач": {
+      "name": "Бахмач",
+      "region": {
+        "$ref": "regions/Чернігівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Бобровиця": {
+      "name": "Бобровиця",
+      "region": {
+        "$ref": "regions/Чернігівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Борзна": {
+      "name": "Борзна",
+      "region": {
+        "$ref": "regions/Чернігівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Городня": {
+      "name": "Городня",
+      "region": {
+        "$ref": "regions/Чернігівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Ічня": {
+      "name": "Ічня",
+      "region": {
+        "$ref": "regions/Чернігівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Корюківка": {
+      "name": "Корюківка",
+      "region": {
+        "$ref": "regions/Чернігівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Мена": {
+      "name": "Мена",
+      "region": {
+        "$ref": "regions/Чернігівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Ніжин": {
+      "name": "Ніжин",
+      "region": {
+        "$ref": "regions/Чернігівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "НовгородСіверський": {
+      "name": "Новгород-Сіверський",
+      "region": {
+        "$ref": "regions/Чернігівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Носівка": {
+      "name": "Носівка",
+      "region": {
+        "$ref": "regions/Чернігівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Остер": {
+      "name": "Остер",
+      "region": {
+        "$ref": "regions/Чернігівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Прилуки": {
+      "name": "Прилуки",
+      "region": {
+        "$ref": "regions/Чернігівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Семенівка": {
+      "name": "Семенівка",
+      "region": {
+        "$ref": "regions/Чернігівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Сновськ": {
+      "name": "Сновськ",
+      "region": {
+        "$ref": "regions/Чернігівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    },
+    "Чернігів": {
+      "name": "Чернігів",
+      "region": {
+        "$ref": "regions/Чернігівськаобласть"
+      },
+      "country": {
+        "$ref": "countries/Україна"
+      }
+    }
+  }
+}
+`;
