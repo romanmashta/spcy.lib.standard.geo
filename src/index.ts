@@ -1,2 +1,3 @@
-export const sayHi = (who: string): string => `Hi ${who}`;
-export const sayBye = (who: string): string => `Bye ${who}`;
+export * from './index.model';
+export * from './index.schema';
+export * from './seed';
