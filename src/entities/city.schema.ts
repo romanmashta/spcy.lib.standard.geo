@@ -11,6 +11,17 @@ const CityType: r.TypeInfo = {
     name: {
       type: 'string'
     },
+    region: {
+      $ref: 'ReferenceWithType',
+      $refPackage: 'lib.core.reflection',
+      $arguments: [
+        {
+          $ref: 'Region',
+          $refPackage: 'lib.standard.geo'
+        }
+      ],
+      $refArguments: 'lib.standard.geo.Region'
+    },
     country: {
       $ref: 'ReferenceWithType',
       $refPackage: 'lib.core.reflection',
