@@ -1,5 +1,5 @@
-import { $ } from '@spcy/lib.model.core';
-import * as Core from '@spcy/lib.model.core';
+import { $ } from '@spcy/lib.standard.core';
+import * as Core from '@spcy/lib.standard.core';
 import { Types } from '../../index.schema';
 
 const collections = Core.createSet(Core.Seed.collections.collections, {
